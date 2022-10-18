@@ -11,7 +11,7 @@ class removeSpTest {
 		Main test = new Main();
 		//method that is expected to remove special characters
 		String output = test.removeSp("Hello!@^");
-		//expected outcome. if does not match, then the test will fail
+		//expected outcome. if does not match, then the test will fail.
 		assertEquals("Hello", output);
 	}
 
