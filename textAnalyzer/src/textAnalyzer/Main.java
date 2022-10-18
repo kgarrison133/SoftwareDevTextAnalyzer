@@ -16,7 +16,9 @@ public class Main {
 		Document doc = Jsoup.connect("https://www.gutenberg.org/files/1065/1065-h/1065-h.htm").timeout(6000).get();
 		
 		// Remove the special characters and HTML tags. Also convert to lower case letters
-		String  poet = doc.select(".chapter").text().toLowerCase().replaceAll("[^a-zA-Z0-9 ]", "");
+		String  poet = doc.select(".chapter").text().toLowerCase();
+		poet = removeSp(poet);
+		
 		
 		//Create HashMap which stores the words and their frequency 
 		Map<String, Integer> wordFreq = new HashMap<>();
@@ -51,6 +53,11 @@ public class Main {
 		
 	}
 		
+	}//end main method
+	
+	//Method that removes special characters from string
+	public static String removeSp(String s) {
+		return s.replaceAll("[^a-zA-Z0-9 ]", "");
 	}
 
 }
