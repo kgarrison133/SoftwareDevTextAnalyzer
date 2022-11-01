@@ -9,8 +9,23 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.*;
+
+
+/**
+ * Date: 1 Nov 2022
+ * This is a project that counts the word occurrence of a poem
+ * @author Garrison
+ * @version 1.0
+ *
+ */
 public class Main {
 
+	
+	/**
+	 * 
+	 * This method scrapes words from a poem and returns words and its occurrences in sorted order
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 //		Scrape from the website
 		Document doc = Jsoup.connect("https://www.gutenberg.org/files/1065/1065-h/1065-h.htm").timeout(6000).get();
@@ -55,8 +70,15 @@ public class Main {
 		
 	}//end main method
 	
+	
 	//Method that removes special characters from string
+	/**
+	 * This method removes special characters
+	 * @param s String value of poem with special characters
+	 * @return String value without special characters
+	 */
 	public static String removeSp(String s) {
+		
 		return s.replaceAll("[^a-zA-Z0-9 ]", "");
 	}
 

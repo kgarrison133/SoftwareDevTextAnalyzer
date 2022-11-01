@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"textAnalyzer","c":"Main","l":"Main()","u":"%3Cinit%3E()"},{"p":"textAnalyzer","c":"Main","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"textAnalyzer","c":"Main","l":"removeSp(String)","u":"removeSp(java.lang.String)"}];updateSearchResults();
